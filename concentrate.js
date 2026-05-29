@@ -36,3 +36,51 @@ const currentUser = {
 };
 
 console.log(welcomeBackUser(currentUser));
+
+let message="Hello"
+let name="Kyle"
+//Scoping in JS
+function greet(){
+    //local scope
+     message="Welcome"
+     name="Jay"
+    console.log(`${message} ${name}`)
+}
+
+//trying to access local variables outside the function returns not defined
+//console.log(`${message} ${name}`)
+console.log("Cannot access the local variables")
+
+greet()
+//block scope
+
+function display_scope(){
+    let message="I am a local variable"// local variable
+    let name="Local variable"
+
+    if (true){
+        let message1="i am a block scoped variable"//block variable
+        console.log(`inner scope:${message}`)
+    
+    }
+    console.log(`outer scope: ${message1}`)
+}
+display_scope()
+
+console.log(test)
+var test= 4;
+
+//var test;
+//console.log(test);
+//var test= 4;
+
+//console.log(myMessage)
+
+//let myMessage;
+//console.log(myName);
+//const myName= "Kyle";
+greetings();
+
+function greetings(){
+    console.log ("Welcome to hoisting!")
+}
