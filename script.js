@@ -156,3 +156,19 @@ function subscribe() {
     })
 }
 subscribe();
+
+document.cookie="username=KyleMurimi, theme=dark";
+console.log(document.cookie)
+
+function createCookie(){
+    const key="session_token";
+    const value="xyz234547675abc";
+    const maxAge="max-age="+ 3600;
+    const path="path=/"
+    const security="Secure; SameSite=lax";
+
+    document.cookie=`${key}={value}; ${maxAge}; ${path}; ${security}`
+
+    console.log("Cookie created successfully!")
+}
+createCookie();
