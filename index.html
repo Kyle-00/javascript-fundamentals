@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Local Storage Demo</title>
 </head>
 <body>
-    <header></header>
     <main>
+        <!-- This will be used as the display area -->
         <p id="output"></p>
-        <button onclick="submit()">Submit</button>
-        <button id="subscribe()">Subscribe</button>
+
+        <!-- Optional buttons – you can remove if not needed -->
+        <button onclick="submitForm()">Submit</button>
+        <button id="subscribeBtn">Subscribe</button>
+
+        <h2>Local Storage</h2>
+        <div>
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button id="btn">Save</button>
+            <button id="btn1">Clear</button>
+        </div>
     </main>
-    <footer></footer>
-    <script src="script.js" type="text/javascript"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
