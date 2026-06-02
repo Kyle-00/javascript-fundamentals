@@ -31,5 +31,5 @@ function clearData() {
 
 // Optional: define submitForm() if you keep the Submit button
 function submitForm() {
-    alert("Submit button clicked – you can add your own logic here.");
+    alert("Submit button clicked");
 }
