@@ -1,4 +1,4 @@
-const { describe } = require('yargs')
+
 const { calculateTax, calculateTotalByCategory} = require('./analytics');
 describe("Tax & Category Test Suit", () => {
     describe("calculateTax", () => {
@@ -6,7 +6,7 @@ describe("Tax & Category Test Suit", () => {
         it("Should correctly calculate the tax for a positive base price", () => {
             const basePrice = 1000;
             const expected = 160; // 1000 * 0.16
-            expectedTax(calculateTax(basePrice, VAT_RATE)).toBe(expectedTax)
+            expect(calculateTax(basePrice, VAT_RATE)).toBe(expected)
         });
         it("Should return 0 when the base price is 0", () => {
             expect(calculateTax(0, VAT_RATE)).toBe(0)
@@ -14,7 +14,7 @@ describe("Tax & Category Test Suit", () => {
         it("Should throw an error if value is negative", () => {
             expect(() => {
                 calculateTax(-1000, VAT_RATE);
-        }).toTrow("Price cannot be negative")
+        }).toThrow("Price cannot be negative")
         });
     });
 
