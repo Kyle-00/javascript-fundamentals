@@ -1,4 +1,4 @@
-const { loginUser } = require('./loginUser');
+const { loginUser } = require('./auth');
 
 describe('loginUser function', () => {
     test('returns success for valid email (kyle@gmail.com) and password (123456)', () => {
