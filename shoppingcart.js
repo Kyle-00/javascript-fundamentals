@@ -2,7 +2,7 @@ function calculateDiscount(totalAmount, couponCode){
     if (totalAmount < 0) return 0;
 
     if (couponCode === "SAVE10"){
-        return 0.10;
+        return totalAmount * 0.10;
     }
     return 0;
 }
